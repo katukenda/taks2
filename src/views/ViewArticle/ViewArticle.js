@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ViewArticles from '../../components/ViewArticles/ViewArticles';
 
 class ViewArticle extends Component {
 
@@ -6,7 +7,7 @@ class ViewArticle extends Component {
 
         return(
             <div>
-                <h1>View Articel Page</h1>
+             <ViewArticles/>
             </div>
         )
     }
