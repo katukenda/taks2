@@ -1,4 +1,5 @@
 import React, { Component, lazy, Suspense } from 'react';
+import {Link} from 'react-router-dom';
 import { Bar, Line } from 'react-chartjs-2';
 import {
   Badge,
@@ -203,6 +204,7 @@ const cardChartData4 = {
     },
   ],
 };
+
 
 const cardChartOpts4 = {
   tooltips: {

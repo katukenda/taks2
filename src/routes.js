@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultLayout from './containers/DefaultLayout';
+import Login from './views/Pages/Login/Login';
 
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
@@ -37,13 +37,17 @@ const Typography = React.lazy(() => import('./views/Theme/Typography'));
 const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
+const Profile = React.lazy(() => import('./views/Dashboard/Profile/Profile'));
 const ViewArticle = React.lazy(() => import('./views/ViewArticle/ViewArticle'));
 const CreateArticle = React.lazy(() => import('./views/CreateArticle/CreateArticle'));
+const DefaultLayout = React.lazy(() => import('./containers/DefaultLayout/DefaultLayout'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-  { path: '/', exact: true, name: 'Home', component: DefaultLayout },
+  { path: '/', exact: true, name: 'Login', component: Login },
+  { path: '/defaultlayout',  name: 'DefaultLayout', component: DefaultLayout },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/profile', name: 'Profile', component: Profile },
   { path: '/createarticle', name: 'CreateArticle', component: CreateArticle },
   { path: '/viewarticle', name: 'ViewArticle', component: ViewArticle},
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
