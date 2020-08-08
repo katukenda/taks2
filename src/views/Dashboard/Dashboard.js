@@ -499,6 +499,7 @@ class Dashboard extends Component {
                       <DropdownItem>Another action</DropdownItem>
                       <DropdownItem disabled>Disabled action</DropdownItem>
                       <DropdownItem>Something else here</DropdownItem>
+                      <DropdownItem><Link to="/profile"><p >Profile</p></Link></DropdownItem>
                     </DropdownMenu>
                   </ButtonDropdown>
                 </ButtonGroup>
