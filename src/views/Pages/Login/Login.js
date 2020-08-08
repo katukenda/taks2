@@ -44,15 +44,19 @@ class Login extends Component {
 
   loginHandler = () => {
   
-    if(this.props.pswrd[0]===this.props.lpassword[0] && this.props.uname[0] === this.props.lname[0]){
+
+     if(this.props.lpassword[0]===undefined || this.props.lname[0]===undefined){
+      alert("No data")
+    }
+    else if(this.props.pswrd[0]===this.props.lpassword[0] && this.props.uname[0] === this.props.lname[0]){
       
-      this.props.history.push("./dashboard")
+      this.props.history.push("./home")
     }
     
     else{
       alert("User Undifined")
     }
-   
+     
   
   }
 
@@ -90,10 +94,7 @@ class Login extends Component {
                         name= "loginname"
                         placeholder="Username" 
                         value={this.props.lname}
-                        onChange={this.onChangelog} 
-                        
-                       
-                        
+                        onChange={this.onChangelog}
                         required/>
                       </InputGroup>
                       <InputGroup className="mb-4">
@@ -108,14 +109,11 @@ class Login extends Component {
                         placeholder="Password"
                         value={this.props.lpassword}
                         onChange={this.onChangelog} 
-                         
-                        
-                        
                         required/>
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button  color="primary" className="px-4" onClick={this.loginHandler}>Login</Button>
+                          <Button  color="primary" className="px-4" onClick={this.loginHandler} >Login</Button>
 
                         </Col>
                         <Col xs="6" className="text-right">

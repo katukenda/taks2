@@ -2,8 +2,8 @@ import React, { Component, useState } from 'react';
 import {connect} from 'react-redux';
 import Modal from 'react-modal';
 
-import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import * as actionTypes from '../../../store/actions/actionTypes';
+import { Button, Card, CardBody, Col,  Form, Input, InputGroup, InputGroupAddon, InputGroupText,  } from 'reactstrap';
+import * as actionTypes from '../../store/actions/actionTypes';
 
 
 
@@ -13,7 +13,7 @@ class Profile extends Component {
     super(props)
 
  this.state ={
-   viewModal: false
+   viewModal: true
  }
 
  }
@@ -72,6 +72,7 @@ modalHandlerBack=()=>{
 
     return (
       <div>
+      
       { this.state.viewModal === true?
       
 
@@ -84,9 +85,8 @@ modalHandlerBack=()=>{
   </header>
   <h3>Email:{this.props.mail}</h3>
   
-  <button color="danger" onClick={this.modalHandler}>Update</button>
 </Card>
-        
+<button color="danger" onClick={this.modalHandler}>Update</button>  
         
         
 
@@ -95,16 +95,15 @@ modalHandlerBack=()=>{
     </div>
 
       :
-      <Modal isOpen={true}>
+      <Modal isOpen={true} >
       <h2>Update Datails</h2>
-      <div>
-      <div className="app flex-row align-items-center">
+      <div >
+      <div className="app flex-row " style={{ alignItems:'right' }}>
             
-            
-                <Col md="9" lg="7" xl="6">
-                  <Card className="mx-4">
+                <Col md="9" lg="25" xl="0">
+                  <Card className="mx-4" style={{ width: '100%', alignItems:'right' }}>
                     <CardBody className="p-4">
-                      <Form >
+                      <Form style={{ alignItems:'right' }}>
                         <InputGroup className="mb-3">
                           <InputGroupAddon addonType="prepend">
                             <InputGroupText>
@@ -133,14 +132,15 @@ modalHandlerBack=()=>{
                         </InputGroup>
                     
                         <Button color="success" onClick={this.registerHandler} block>Comfirm</Button>
+                        <Button  onClick={this.modalHandlerBack} block>Back</Button>
                       </Form>
                     </CardBody>
                    
                   </Card>
-                  <button onClick={this.modalHandlerBack}>Back</button>
+                 
                 </Col>
          
-            
+                
           </div>
       </div>
       

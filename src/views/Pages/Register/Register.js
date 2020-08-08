@@ -32,7 +32,7 @@ registerHandler = () => {
   
   if(regpass===reregpass){
     alert('Registration Success')
-    this.props.history.push("./login")
+    this.props.history.push("./")
   }else{
     alert("Password Mismatch")
   }

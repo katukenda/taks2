@@ -9,6 +9,16 @@ export default {
         
       },
     },
+
+    {
+      name: 'Profile',
+      url: '/profile',
+      icon: 'icon-puzzle',
+      badge: {
+        variant: 'info',
+        
+      },
+    },
     {
       name: 'Create Article',
       url: '/createarticle',
@@ -27,6 +37,7 @@ export default {
         
       },
     },
+  
     
     
     
